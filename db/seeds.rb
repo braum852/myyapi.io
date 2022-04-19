@@ -8,5 +8,15 @@
 
 # User.create!(email: "z@dev.com", password: "asdfasdf", password_confirmation: "asdfasdf")
 
-Trip.create(title: "Visit museum", done: false)
-Trip.create(title: "Imagine Dragons Concert", done: false)
+# Trip.create(title: "Visit museum")
+# Trip.create(title: "Imagine Dragons Concert")
+
+hailmary = User.create(firstname: "Lizzy", lastname: "Venzon", username: "babylizzy", email: "hailmary@google.com", password_digest: "christian")
+wakanda = User.create(firstname: "john", lastname: "hello", username: "any", email: "wknda4eva@google.com", password_digest: "black")
+
+Trip.create(title: 'Museum', user_id: wakanda.id)
+Trip.create(title: 'Brisbane', user_id: wakanda.id)
+Trip.create(title: 'Sydney', user_id: hailmary.id)
+Trip.create(title: "Walk down South Bank", user_id: wakanda.id)
+Trip.create(title: "Find Movies", user_id: wakanda.id)
+Trip.create(title: "McDonalds", user_id: hailmary.id)

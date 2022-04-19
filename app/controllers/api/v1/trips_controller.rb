@@ -11,7 +11,7 @@ class Api::V1::TripsController < ApplicationController
 
   def update
     trip = Trip.find(params[:id])
-    trip.update_attributes(trip_param)
+    trip.update(trip_param)
     render json: trip
   end
 
@@ -23,6 +23,6 @@ class Api::V1::TripsController < ApplicationController
   
   private
     def trip_param
-      params.require(:trip).permit(:title, :done)
+      params.require(:trip).permit(:title, :done, :user_id)
     end
 end

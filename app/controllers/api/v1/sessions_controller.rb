@@ -1,5 +1,5 @@
 class Api::V1::SessionsController < ApplicationController
-  # include CurrentUserConcern
+  include CurrentUserConcern
 
   def create
     user = User
