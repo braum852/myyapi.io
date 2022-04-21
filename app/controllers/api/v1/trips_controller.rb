@@ -18,11 +18,10 @@ class Api::V1::TripsController < ApplicationController
   def destroy
     trip = Trip.find(params[:id])
     trip.destroy
-    head :no_content, status: :ok
   end
   
   private
     def trip_param
-      params.require(:trip).permit(:title, :done, :user_id)
+      params.require(:trip).permit(:title, :done, :date_added, :user_id)
     end
 end

@@ -14,17 +14,9 @@ ActiveRecord::Schema.define(version: 2022_04_17_134417) do
 
   create_table "trips", force: :cascade do |t|
     t.string "title"
+    t.date "date_added", default: "2022-04-21"
     t.boolean "done"
     t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -31,6 +31,9 @@ module Myyapi
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.active_record.default_timezone = false
+    config.active_record.time_zone_aware_attributes = false
+    config.time_zone = false
 
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.

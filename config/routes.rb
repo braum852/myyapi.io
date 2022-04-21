@@ -3,10 +3,11 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :trips
       resources :sessions, only: [:create]
-      resources :users, only: [:create]
-      delete :logout, to: "sessions#logout"
-      get :logged_in, to: "sessions#logged_in"
-      root to: "static#home"
+      resources :users, only: [:index, :show, :create]
+      get "/find_user", to: "sessions#find_user"
+      post '/login', to: 'sessions#create'
+      post '/signup', to: 'users#create'
+      delete '/logout', to: 'sessions#destroy'
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
