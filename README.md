@@ -20,5 +20,6 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
+    Run bundle install
+    Run rails s (run alongside to establish connection with trip database and permits modification of entered data)
 * ...
